@@ -46,4 +46,4 @@ ENV PATH="$PATH:/opt/conda/envs/R/bin"
 RUN /opt/conda/envs/R/bin/R -s -e "devtools::install_github('rasilab/rasilabRtemplates', ref = '0.4.0')"
 
 # for rasterizing specific ggplot layers
-RUN mamba install -c conda-forge r-ggrastr r-ggh4x
+RUN mamba install -y -n R -c conda-forge r-ggrastr r-ggh4x
